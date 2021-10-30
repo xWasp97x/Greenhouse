@@ -1,0 +1,37 @@
+{
+  "SENSORS": {
+    "light": {
+      "pin": 33,
+      "history_length": 50,
+      "max_voltage" : 1,
+      "decimals": 0
+    },
+    "moisture": {
+      "pin": 39,
+      "history_length": 50,
+      "max_voltage": 3.3,
+      "decimals": 0
+    }
+  },
+  "CONTROLLERS": {
+    "light": {
+      "threshold": 50
+    },
+    "moisture": {
+      "low_threshold": 40,
+      "high_threshold": 60,
+      "keep_on_secs": 2,
+      "irrigation_delay": 10
+    }
+  },
+  "LOGGER": {
+    "loop_delay": 1
+  },
+  "MQTT_LOGGER": {
+    "delay": 5,
+    "broker": "192.168.178.3",
+    "port": 1883,
+    "topic": "test",
+    "qos": 0
+  }
+}
