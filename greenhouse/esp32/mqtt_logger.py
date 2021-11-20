@@ -74,9 +74,9 @@ class MQTTLogger:
 		controller: Controller
 		for controller in self.controllers:
 			class_name = controller.__class__.__name__
-			payload_dict['actuators'][class_name] = {}
-			payload_dict['actuators'][class_name]['enabled'] = controller.enabled
-			payload_dict['actuators'][class_name]['busy'] = controller.busy
+			payload_dict['controllers'][class_name] = {}
+			payload_dict['controllers'][class_name]['enabled'] = controller.enabled
+			payload_dict['controllers'][class_name]['busy'] = controller.busy
 
 		payload = json.dumps(payload_dict, separators=(',', ':'))
 
