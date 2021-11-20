@@ -1,5 +1,5 @@
 from controller import Controller
-from actuator import Actuator
+from greenhouse.esp32.actuator import Actuator
 from observer import Observer, Observable
 import uasyncio
 

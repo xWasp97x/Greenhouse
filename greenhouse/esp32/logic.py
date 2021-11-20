@@ -1,8 +1,6 @@
-from sensorreader import MoistureReader
 import uasyncio
 from machine import Pin
-from controller import Controller, MoistureController
-from actuator import Actuator
+from controller import Controller
 from daynightmanager import DayNightManager
 
 

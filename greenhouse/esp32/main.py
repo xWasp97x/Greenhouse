@@ -1,8 +1,5 @@
 import network
-from machine import Pin
 import uasyncio
-from sensorreader import *
-from actuator import *
 from controller import *
 from logic import Logic
 from logger import Logger
@@ -89,7 +86,7 @@ logger = Logger(hardware, readers, controllers)
 event_loop.create_task(logger.loop(config['LOGGER']['loop_delay']))
 
 sub_configs = config['MQTT_LOGGER']
-mqtt_logger = MQTTLogger(wlan, config['WIFI']['ssid'], config['WIFI']['pwd'], sub_configs['broker'], sub_configs['port'], sub_configs['topic'], sub_configs['qos'], readers, hardware, controllers)
+mqtt_logger = MQTTLogger(wlan, wifi_config['ssid'], wifi_config['pwd'], sub_configs['broker'], sub_configs['port'], sub_configs['topic'], sub_configs['qos'], readers, hardware, controllers)
 event_loop.create_task(mqtt_logger.loop(sub_configs['delay']))
 
 event_loop.run_forever()

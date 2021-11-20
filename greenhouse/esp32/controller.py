@@ -1,8 +1,8 @@
-from actuator import *
+from greenhouse.esp32.actuator import *
 from sensorreader import *
 import uasyncio
 from observer import Observer
-from actuator import Actuator
+from greenhouse.esp32.actuator import Actuator
 
 
 class Controller:

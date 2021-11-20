@@ -4,7 +4,7 @@ import ubinascii
 import machine
 import uasyncio
 from sensorreader import ADCReader
-from actuator import Actuator
+from greenhouse.esp32.actuator import Actuator
 from controller import Controller
 import ujson as json
 import time
