@@ -1,0 +1,15 @@
+MQTT_BROKER:
+  address: None
+  port: None
+  qos: None
+  topic: None
+  id:
+
+LOGGING:
+  path: None
+
+FRONTEND:
+  title: None
+
+BACKEND:
+  data_path: None
