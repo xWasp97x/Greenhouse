@@ -68,7 +68,7 @@ class Dashboard:
 
 
 if __name__ == '__main__':
-    dashboard = Dashboard()
+    dashboard = Dashboard(os.environ['config_file'])
 
     while True:
         sleep(60)
