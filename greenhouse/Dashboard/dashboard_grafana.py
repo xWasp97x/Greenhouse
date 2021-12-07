@@ -32,7 +32,7 @@ class Dashboard:
     def __init__(self, config_path='./config.yaml'):
         with open(config_path, 'r') as file:
             self.config = yaml.safe_load(file)
-        self.backend = Backend()
+        self.backend = Backend(config_path)
         self.init_logger(self.config['LOGGER']['path'])
         self.db_engine = self.init_db_engine()
         self.db_connection = self.init_db_connection()
