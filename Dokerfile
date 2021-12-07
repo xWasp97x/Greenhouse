@@ -8,4 +8,4 @@ RUN apt install python3-pip -y
 RUN git clone https://github.com/xWasp97x/Greenhouse.git
 WORKDIR ./Greenhouse
 
-CMD ['/usr/bin/bash', 'entrypoint.sh']
+CMD /usr/bin/bash entrypoint.sh
