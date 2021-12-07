@@ -99,6 +99,9 @@ class Backend(Observer):
         root = self.config['BACKEND']['data_path']
         relative_path = os.path.join(root, sub_path)
 
+        if not os.path.exists(root):
+            os.mkdir(root)
+
         if not os.path.exists(relative_path):
             os.mkdir(relative_path)
 
