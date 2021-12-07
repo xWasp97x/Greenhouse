@@ -39,6 +39,10 @@ class Backend(Observer):
 
     @staticmethod
     def load_data(path) -> dict:
+        if not os.path.isdir(path):
+            logger.warning(f'No data directory! "({path})"')
+            return {}
+
         logger.debug(f'Loading data from "{path}"...')
         categories = os.listdir(path)
         logger.debug(f'Categories found: {categories}')
