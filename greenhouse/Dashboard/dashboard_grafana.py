@@ -4,10 +4,8 @@ from backend import Backend
 import sys
 import os
 from loguru import logger
-from graphs import LineGraph
 from backend import Thing
 from observer_pattern import Observer
-import psycopg2
 from sqlalchemy import create_engine
 from time import sleep
 
