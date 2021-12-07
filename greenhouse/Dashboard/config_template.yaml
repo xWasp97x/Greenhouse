@@ -1,15 +1,22 @@
 MQTT_BROKER:
-  address: None
-  port: None
-  qos: None
-  topic: None
-  id:
+  address: 'address'
+  port: 1883
+  qos: 1
+  topic: 'data'
+  id: 'dashboard'
 
-LOGGING:
-  path: None
+LOGGER:
+  path: './logs/'
+  level: 'DEBUG'
 
 FRONTEND:
-  title: None
+  title: 'Greenhouse'
 
 BACKEND:
-  data_path: None
+  data_path: './data'
+
+DATABASE:
+  host: 'address'
+  database: 'dashboard'
+  user: postgres
+  password: toor

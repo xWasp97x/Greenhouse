@@ -38,10 +38,9 @@ class Dashboard:
         self.db_connection = self.init_db_connection()
         self.updaters = self.init_updaters()
 
-    @staticmethod
-    def init_logger(logs_path):
+    def init_logger(self, logs_path):
         logger.remove()
-        logger.add(sys.stdout, format=log_format, colorize=True, level='INFO')
+        logger.add(sys.stdout, format=log_format, colorize=True, level=self.config['LOGGER']['level'])
         logger.add(os.path.join(logs_path, '{time:YYYY-MM-DD}.log'), format=log_format,
                    colorize=False, compression='zip', rotation='00:00')
 
