@@ -1,8 +1,0 @@
-FROM alpine:latest
-
-WORKDIR /app
-
-RUN git clone git@https://github.com/xWasp97x/Greenhouse.git
-RUN pip3 install -f ./requirements.txt
-
-CMD ["git clone", "pip3 install -f ./requirements.txt", "python3 greenhouse/Dashboard/dashboard_grafana.py"]
