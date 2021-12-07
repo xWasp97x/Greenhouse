@@ -60,8 +60,8 @@ class Dashboard:
     def init_updaters(self):
         data = self.backend.data
         sensors = data.get('sensors', {})
-        updaters = [DBUpdater('data', 'temp_in', sensors.get('temp_in', {}), self.db_connection),
-                    DBUpdater('data', 'moisture', sensors.get('MoistureReader', {}), self.db_connection)]
+        updaters = [DBUpdater('data', 'temp_in', sensors.get('temp_in', Thing()), self.db_connection),
+                    DBUpdater('data', 'moisture', sensors.get('MoistureReader', Thing()), self.db_connection)]
 
         return updaters
 
